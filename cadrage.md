@@ -1,6 +1,6 @@
 # Document de cadrage — Dashboard Méta League of Legends
 
-*Bachelor Data et IA — MD4 — Dashboards & Data Visualisation*
+*MD4 — Dashboards & Data Visualisation*
 
 **Titre du dashboard** : ⚔️ Ban ou pick ? Ce que cache la méta
 

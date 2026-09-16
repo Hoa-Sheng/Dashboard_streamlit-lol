@@ -1,8 +1,7 @@
 # ⚔️ Ban ou pick ? Ce que cache la méta
 
 Dashboard Streamlit sur la méta de la saison 12 de League of Legends, réalisé
-dans le cadre du cours *Dashboards & Data Visualisation* (Bachelor Data et
-IA — MD4). Le cadrage complet (message, audience, KPIs) est détaillé dans
+dans le cadre du cours *Dashboards & Data Visualisation* (MD4). Le cadrage complet (message, audience, KPIs) est détaillé dans
 [cadrage.md](cadrage.md).
 
 **Message clé** : sur la saison 12, être Tier S/SS ou très banni ne veut pas
