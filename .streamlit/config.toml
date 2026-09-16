@@ -1,0 +1,11 @@
+[theme]
+# Palette sobre : un seul accent (or discret, clin d'oeil LoL) sur fond clair.
+# Objectif : lisibilite et calme visuel plutot que "gaming UI" chargee.
+primaryColor = "#B8862E"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F4F5F7"
+textColor = "#1C1C1C"
+font = "sans serif"
+
+[browser]
+gatherUsageStats = false

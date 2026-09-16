@@ -1,0 +1,15 @@
+# --- Dashboard (app.py) ---
+streamlit>=1.64
+pandas>=2.2
+plotly>=5.20
+requests>=2.31   # images des champions (Community Dragon)
+
+# --- Récupération des données (scripts/download_data.py) ---
+kagglehub>=0.3
+
+# --- Analyse exploratoire (AED, notebooks) ---
+numpy>=2.0
+matplotlib>=3.9
+seaborn>=0.13
+scikit-learn>=1.5
+ipykernel>=6.29
