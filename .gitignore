@@ -13,7 +13,6 @@ __pycache__/
 # OS
 .DS_Store
 Thumbs.db
-data/
 .vscode/
 
 secrets.toml
