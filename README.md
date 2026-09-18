@@ -35,16 +35,13 @@ presque tous les champions autour de 50 % de victoires.
   par score dans chaque tier. Chaque case (photo, nom, rôle) est cliquable et
   ouvre le profil du champion.
 - **🧑‍🎤 Profil champion**
-  - sélecteur de champion (conservé quand on change de patch) et de rôle,
-    y compris les *off-roles* (signalés, avec un avertissement) ;
   - portrait, tier, tendance, classe et verdict craint / sous-coté ;
   - 5 indicateurs (Win rate, Pick rate, Ban rate, KDA, Score) comparés à la
     moyenne du rôle ; un bouton sous chaque indicateur choisit la courbe ;
   - courbe de l'indicateur choisi sur les 23 patchs, avec la moyenne du rôle
     en pointillés.
 - **📖 Lexique** : les termes techniques du dashboard (statistiques,
-  classement, jeu, rôles, classes) avec traduction et définition simple,
-  et une barre de recherche.
+  classement, jeu, rôles, classes) avec traduction et définition simple.
 
 ## Structure du projet
 
@@ -54,8 +51,6 @@ Projet lol/
 ├── data/                      # 23 CSV, un par patch (12.1 à 12.23)
 ├── .streamlit/
 │   └── config.toml            # Thème visuel (palette, police)
-├── Doc/
-│   └── CDC_LoL_Dashboard_v4.pdf  # Cahier des charges
 ├── cadrage.md                 # Document de cadrage (livrable du brief)
 ├── requirements.txt
 └── README.md
@@ -120,7 +115,7 @@ un champion multi-rôles compte plusieurs fois dans les totaux.
 - **Un seul fichier `app.py`**, organisé en fonctions par responsabilité
   (chargement, graphiques, un `render_…_tab` par onglet).
 - **Couleurs constantes** : Win % toujours en vert, Ban % toujours en rouge ;
-  les tiers suivent une seule teinte dorée, de plus en plus foncée du D au SS.
+  les tiers suivent une seule teinte dorée (rappelant le jeu), de plus en plus foncée du D au SS.
 - **Classements sur les pourcentages réels** plutôt qu'un score calculé :
   la règle de tri se lit dans le titre de chaque graphique.
 - **Page « Profil champion » dynamique** plutôt que 160+ pages statiques :

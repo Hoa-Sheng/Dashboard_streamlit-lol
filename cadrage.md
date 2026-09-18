@@ -47,7 +47,40 @@ moyen, en appui, et non mis en avant comme des indicateurs de décision.
 - **Off-roles** : sur un patch, un rôle secondaire joué dans moins de 1 % des
   parties est exclu des vues (win rate peu fiable, doublon), sauf dans le
   profil champion où il reste consultable avec un avertissement.
-- **Tier SS** : correspond au tier « God » de la source, renommé.
+- **Tier SS** : correspond au tier « God » de la source, renommé pour s'adapter à un nom plus "neutre".
+
+## Choix d'interaction — sélecteurs du profil champion
+
+Le profil champion se pilote avec deux sélecteurs (champion, puis rôle) qui
+doivent rester cohérents quand l'utilisateur déplace le curseur de patch.
+Trois problèmes se posaient, avec les réponses retenues.
+
+**1. La sélection était perdue à chaque changement de patch.** Streamlit
+identifie un menu par ses paramètres : si la liste des options change, il le
+considère comme un nouveau menu et revient au premier élément. La liste des
+champions, construite patch par patch, changeait donc en permanence. Elle
+couvre désormais toute la saison et ne bouge plus ; le filtre par patch est
+appliqué après, sur les données. Si le champion choisi n'existe pas sur le
+patch affiché, un message le signale à la place de la fiche.
+
+**2. Les off-roles n'étaient proposés nulle part.** Ils étaient supprimés au
+chargement. Ils sont maintenant marqués (colonne `off_role`) au lieu d'être
+retirés : seul le profil champion reçoit les données complètes, les autres
+onglets gardent la version filtrée. Dans le sélecteur de rôle, le rôle
+principal vient en premier, les off-roles ensuite, signalés par la mention
+« (off-role) » et par une infobulle qui rappelle le seuil de 1 %. Choisir un
+off-role affiche un avertissement avec son pick rate exact, car ses
+statistiques reposent sur peu de parties.
+
+**3. Le rôle choisi devait survivre au changement de patch.** Les rôles
+disponibles varient d'un patch à l'autre, ce qui recrée le sélecteur. Le
+dernier rôle choisi est donc mémorisé et réappliqué s'il existe encore ;
+sinon, la fiche repart du rôle principal.
+
+**Comparaisons.** Les écarts affichés sous chaque indicateur (« −2,4 vs
+SUPPORT ») et la courbe de référence sont calculés sans les off-roles, même
+quand la fiche en affiche un : la comparaison reste ainsi cohérente avec le
+reste du dashboard.
 
 ## Structure
 
